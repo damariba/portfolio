@@ -1,0 +1,429 @@
+/* ===========================
+   v17 — Mono-Tech / Futuristic Minimal
+   (alle Klassennamen beibehalten)
+   =========================== */
+
+:root{
+  --bg:#ffffff;
+  --ink:#1f2328;                 /* sattes Anthrazit, klar und modern */
+  --muted:#5e646c;               /* kühles Grau für Sekundärtext */
+  --line:rgba(17,19,22,.12);     /* dezente Divider */
+
+  --accent:#ff5d73;            /* kräftiger, satter Rot-Korallton */
+  --accent-2:#ff8d9b;          /* heller Verlauf */
+  --grad-strong: linear-gradient(90deg, var(--accent), var(--accent-2));
+  --grad-soft: linear-gradient(90deg, rgba(255,93,115,.25), rgba(255,141,155,.20));
+}
+
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.8; -webkit-font-smoothing:antialiased;
+}
+.wrap{ width:min(980px,92%); margin:0 auto }
+.center{ text-align:center }
+
+/* NAV */
+.nav{
+  position:sticky; top:0;
+  background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(1px);
+  border-bottom:1px solid var(--line);
+  z-index:10000; isolation:isolate;
+}
+.nav-inner{ display:flex; align-items:center; justify-content:space-between; height:68px }
+.brand{ font:600 1rem/1 'General Sans','DM Sans',system-ui }
+.links a{ text-decoration:none; color:var(--muted); margin-left:22px; font-weight:500 }
+.links a:hover{ color:var(--ink) }
+
+/* HERO */
+.hero{ padding:76px 0 88px; position:relative; z-index:0 }
+.hero-grid{ display:grid; grid-template-columns:1.2fr .7fr; gap:28px; align-items:center }
+
+/* TYPO */
+.display{
+  font:700 clamp(2.6rem,5vw,4rem)/1.16 'General Sans','DM Sans',system-ui; /* dominanter, aber sachlich */
+  letter-spacing:-0.02em; margin:.2rem 0 1.4rem;
+}
+.gradient-text{
+  /* kühler, schmaler Verlauf für Text – reduziert bunt */
+  background: var(--grad-strong);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero-divider{
+  height:2px; width:200px;
+  background: linear-gradient(90deg, transparent, rgba(15,26,38,.35), transparent);
+  border-radius:999px; margin:.35rem 0 1.4rem .2rem;
+}
+.subtitle{ font:500 1.18rem/1.4 'General Sans','DM Sans',system-ui; margin:.2rem 0 1.1rem 1.2rem; color:#3a4047 }
+.lede{ color:#515960; max-width:720px; font-size:1.06rem; line-height:1.85}
+.name-sub{ font:600 .92rem/1.2 'General Sans','DM Sans',system-ui; letter-spacing:.12em; margin:.2rem 0 1.4rem 0.2rem; color:#2a2f35; opacity:.85 }
+
+/* CTA BUTTONS – kantiger, sachlicher */
+.cta{ display:flex; gap:14px; margin-top:22px }
+.btn{
+  display:inline-block; padding:12px 20px; border-radius:8px;
+  font-weight:600; text-decoration:none;
+  transition:box-shadow .18s ease, transform .12s ease, filter .18s ease, background .18s ease;
+}
+.btn.gradient{
+  background: var(--grad-strong); color:#fff; border:none;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+.btn.gradient:hover{ transform:translateY(-1px); box-shadow:0 10px 26px rgba(0,42,92,.18) }
+.btn.outline{ border:1.5px solid var(--line); color:var(--ink); background:var(--bg) }
+.btn.outline:hover{ transform:translateY(-1px); box-shadow:0 6px 14px rgba(0,0,0,.06) }
+
+/* ICON BUTTONS (Kontakt) – gefüllt, minimal */
+.btn.icon.square{
+  width:44px; height:44px; padding:0; display:inline-flex; align-items:center; justify-content:center;
+  border-radius:10px; background: linear-gradient(180deg, #1a2836, #121a23);
+  color:#e8f1ff; box-shadow:0 8px 24px rgba(8,18,30,.18);
+}
+.btn.icon.square:hover{ transform:translateY(-1px) scale(1.02); box-shadow:0 14px 30px rgba(8,18,30,.24) }
+.btn.icon.square .icon svg{ width:20px; height:20px; display:block }
+
+.hero-banner {
+  position: relative;
+  width: 60%;
+  max-width: 320px;
+  aspect-ratio: 2/5;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0e1620, #0f1a26) padding-box;
+  border: 1px solid rgba(255,255,255,0.06);
+  display: grid;
+  place-items: center;
+  margin: auto;
+  z-index: 0;
+  justify-self: end;
+
+  /* subtle light gradient for depth */
+  background-image:
+    radial-gradient(ellipse at 40% 20%, rgba(255,255,255,0.08), transparent 60%),
+    radial-gradient(ellipse at 60% 80%, rgba(90,167,255,0.1), transparent 70%),
+    linear-gradient(180deg, #0e1620, #0f1a26);
+  background-blend-mode: overlay;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 30% 15%, rgba(255,255,255,0.15), transparent 60%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transition: opacity .5s ease;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+  transform: scale(1.02);
+  opacity: 0.9;
+  transition: transform .6s ease;
+  filter: saturate(.9)
+    contrast(1.1)
+    brightness(1.1)
+    hue-rotate(0deg); /* cool tech tint */
+}
+
+/* SECTIONS */
+.section{ padding:84px 0; text-align:left; border-top:2px solid var(--line) }
+.section-title{ font:700 1.9rem/1.15 'General Sans','DM Sans',system-ui; color:var(--ink); margin:0 0 48px }
+.item-title{ font:600 1.08rem/1.3 'General Sans','DM Sans',system-ui; margin:0 0 8px; color:#2a2f35 }
+.subsection{ font:700 1.7rem/1.25 'General Sans','DM Sans',system-ui; margin:16px 0 16px }
+
+/* PROJECTS */
+.project-card{ display:grid; grid-template-columns:1fr 1.2fr; gap:24px; align-items:center }
+.project-card + .project-card{ margin-top:-10px }
+
+/* Bilder mit präzisem, kühlem Rahmen */
+.project-img, .project-img-thin{
+  position:relative; border-radius:10px; border:1px solid transparent;
+  background: linear-gradient(#ffffff,#ffffff) padding-box;
+  overflow:hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.project-img{ aspect-ratio:4/3 }
+.project-img-thin{ aspect-ratio:2904/1360 }
+.project-img img, .project-img-thin img{ width:100%; height:100%; object-fit:cover; display:block; border-radius:inherit }
+
+
+.project-img iframe,
+.project-img-thin iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* SKILLS – Tool-Badges, kein Bonbon */
+.chips{ display:flex; flex-wrap:wrap; gap:10px; row-gap:12px; margin-top:8px }
+.chips span{
+  font-size:.95rem; padding:8px 14px; border-radius:8px;
+  border:1.5px solid rgba(17,19,22,.12);
+  background:#fbfcfe;
+  color:#27303a; transition:box-shadow .16s ease, transform .12s ease, border-color .16s ease;
+}
+.chips span:hover{ transform:translateY(-1px); box-shadow:0 8px 22px rgba(8,18,30,.08); border-color:rgba(17,19,22,.20) }
+
+/* INFO ROWS (Edu/Exp) */
+.info-row{ display:grid; grid-template-columns:80px auto; gap:16px; align-items:center; margin:0 0 18px }
+.logo{
+  width:80px; height:80px; border-radius:10px; position:relative; overflow:hidden;
+  border:1.5px solid transparent;
+  background: linear-gradient(#ffffff,#ffffff) padding-box,
+              linear-gradient(90deg, rgba(255,93,115,.25), rgba(255,141,155,.20)) border-box;
+  display:grid; place-items:center;
+}
+.logo img{ width:100%; height:100%; object-fit:contain; border-radius:inherit; display:block }
+
+/* Gradient-Intro (dezent kühler) */
+.gradient-intro{
+  font-weight:600; font-size:1.06rem;
+  background: linear-gradient(90deg, #0f1a26, #2a3542);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  margin-bottom:1rem;
+}
+
+/* CONTACT */
+.contact-actions{ display:flex; gap:24px; justify-content:center; flex-wrap:wrap }
+.contact-actions .btn{ min-width:140px; text-align:center }
+
+/* FOOTER */
+.footer{ border-top:1px solid var(--line); text-align:center; padding:44px 0; color:#68707a; font-size:.95rem }
+
+/* SCROLL REVEAL */
+.sr{ opacity:0; transform:translateY(14px); will-change:transform,opacity }
+.sr.in{ opacity:1; transform:none; transition:opacity .55s ease, transform .55s ease }
+
+/* ACCORDION – sachlich, klickbar
+
+.accordion > summary{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 14px; border-radius:10px;
+  background:#fbfcfe; border:1px solid var(--line);
+  cursor:pointer; user-select:none; list-style:none;
+  transition:box-shadow .18s ease, transform .12s ease, border-color .18s ease;
+}
+.accordion > summary::-webkit-details-marker{ display:none }
+.accordion > summary:hover{ box-shadow:0 8px 22px rgba(8,18,30,.08); transform:translateY(-1px) }
+.accordion[open] > summary{ border-color:rgba(17,19,22,.18); box-shadow:0 12px 28px rgba(8,18,30,.10) }
+.accordion > summary .subsection{ margin:0 }
+.accordion .chev{ width:26px; height:26px; flex-shrink:0; transition:transform .25s ease }
+.accordion .chev path {
+  stroke: var(--accent);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.accordion[open] .chev{ transform:rotate(180deg) }
+
+.accordion > *:not(summary){
+  padding:28px 4px; border-bottom:1px solid var(--line);
+  animation:acc-fade .25s ease;
+}
+.accordion > *:not(summary):first-of-type{ border-top:none }
+@keyframes acc-fade{ from{opacity:0; transform:translateY(-4px)} to{opacity:1; transform:none} } */
+
+/* Header like .btn.outline */
+.accordion {
+  border: none;
+  margin: 20px 0; /* mehr Abstand zwischen Blöcken */
+  border-radius: 8px;
+  overflow: visible;
+}
+.accordion > summary{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 18px; border-radius:8px; min-height: 48px;
+  background: var(--bg);
+  border: 1.5px solid var(--line);
+  color: var(--ink);
+  cursor:pointer; user-select:none; list-style:none;
+  transition: box-shadow .18s ease, transform .12s ease, border-color .18s ease;
+}
+.accordion > summary::-webkit-details-marker{ display:none; }
+/* Hover-Effekt wie bei .btn.outline */
+.accordion > summary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.06);
+  border-color: rgba(17,19,22,.18);
+  background: var(--bg);
+}
+/* Aktiver Zustand (wenn geöffnet) – etwas stärkerer Schatten */
+.accordion[open] > summary {
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  border-color: rgba(17,19,22,.20);
+  background: var(--bg);
+}
+/* Abstand zwischen geöffnetem Header und Inhalt */
+.accordion > *:not(summary) {
+  padding-top: 48px;        /* Abstand oberhalb des Inhalts */
+  padding-bottom: 24px;     /* optional etwas unten */
+  padding-left: 4px;
+  padding-right: 4px;
+  animation: acc-fade .25s ease;
+}
+
+/* Chevron (no box), gradient stroke with fallback */
+.accordion .chev{ width:124px; height:54px; flex-shrink:0; display:inline-grid; place-items:center; transition: transform .25s ease; }
+.accordion .chev svg{ width:100%; height:100%; display:block; }
+.accordion .chev path{
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: square;
+  stroke-linejoin: round;
+  fill: none;
+}
+.accordion[open] .chev{ transform: rotate(180deg); }
+
+/* Utilities */
+.sr-hidden{ visibility:hidden }
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{ grid-template-columns:1fr }
+  .hero-banner{ width:100%; justify-self:auto }
+  .section{ padding:72px 0 }
+}
+/* Hintergrund-GRID hinter allem platzieren */
+.bg-anim0{
+  position: fixed;
+  inset: 0;                 /* füllt den ganzen Viewport */
+  z-index: 0;               /* hinter dem Inhalt */
+  pointer-events: none;
+  background-color: #fff;
+
+  /* dein Linienraster (mit stärkerem #ff6b81-Ton) */
+  background-image:
+    repeating-linear-gradient(0deg,   rgba(255, 93, 115, .10) 0 1px, transparent 1px 52px),
+    repeating-linear-gradient(90deg,  rgba(255, 93, 115, .10) 0 1px, transparent 1px 52px);
+  background-size: 52px 52px;
+  animation: gridShift 40s linear infinite;
+}
+
+/* Inhaltsebene über das Grid heben */
+.nav, .wrap, .footer{
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes gridShift{
+  to { background-position: 32px 32px, 32px 32px; }
+}
+
+/* Ebene hinter allem */
+.bg-anim{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* 3D-Gitterfläche */
+.grid-plane{
+  position: absolute;
+  left: 50%;
+  bottom: -10vh;                  /* leicht unter den Bildschirm schieben */
+  width: 160vw;                   /* extra breit, damit Ränder nicht sichtbar werden */
+  height: 160vh;
+
+  /* Raster in deiner Akzentfarbe */
+  --grid-c: rgba(255,93,115,.14); /* aus #ff5d73 Familie */
+  background-image:
+    repeating-linear-gradient(0deg,   var(--grid-c) 0 1px, transparent 1px 52px),
+    repeating-linear-gradient(90deg,  var(--grid-c) 0 1px, transparent 1px 52px);
+
+  transform-origin: 50% 50%;      /* Fluchtpunkt gefühlt unten */
+  transform:
+    translateX(-50%)
+    perspective(900px)
+    rotateX(54deg)                /* kippt die Fläche nach hinten */
+    /* rotateZ(-2deg)                minimaler Winkel für Dynamik */
+    translateZ(0);
+
+  /* Tiefe/Verblassen nach hinten */
+  mask-image: linear-gradient( to top, rgba(0,0,0,1) 30%, rgba(0,0,0,.2) 80%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient( to top, rgba(0,0,0,1) 30%, rgba(0,0,0,.2) 80%, rgba(0,0,0,0) 100%);
+
+  /* dezente Reflexe */
+  /* box-shadow:
+    inset 0 0 120px rgba(255,255,255,.06),
+    0 -20px 80px rgba(0,0,0,.08); */
+}
+
+/* Inhalt über das Grid legen */
+.nav, .wrap, .footer{
+  position: relative;
+  z-index: 1;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.project-card-small {
+  text-decoration: none;
+  color: inherit;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.project-card-small:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.08);
+}
+
+.project-thumb {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(17,19,22,.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,.04);
+  aspect-ratio: 4 / 3;
+  background: #fff;
+  margin-bottom: 14px;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.project-card-small:hover .project-thumb img {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+.project-card-small h3 {
+  font-weight: 600;
+  margin: 6px 0 6px;
+}
+
+.project-card-small p {
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+/* Responsive fallback */
+@media (max-width: 900px) {
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
