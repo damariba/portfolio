@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Damaris</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="bg-anim">
+  <div class="grid-plane"></div>
+</div>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand gradient-text">Damaris Bartholet</div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="projects" class="section sr">
+      <h2 class="section-title">Projects</h2>
+
+
+    <details class="accordion">
+    <summary>
+          <h3 class="subsection gradient-text">Robotics</h3>
+  <span class="chev" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6"></path>
+    </svg>
+  </span>
+</summary>
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/3DGS.png" alt="3D Gaussian Splatting">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Vision-based navigation framework for mobile robots</h3>
+          <p>Currently developing an end-to-end computer vision pipeline that transforms monocular camera recordings into actionable navigation data for autonomous robots. 
+            The framework reconstructs 3D environments using Gaussian Splatting, extracts traversability maps, and performs optimal path planning. 
+            The project integrates 3D reconstruction, perception, and planning into a unified system for real-world robotic navigation at Caltech’s Center for Autonomous Systems and Technologies (CAST).</p>
+          <div class="chips"><span>Python</span><span>C++</span><span>Linux</span><span>Docker</span><span>Bash/Shell</span><span>COLMAP</span><span>3DGS</span><span>Traversability mapping</span><span>ROS2</span><span>Path Planning</span><span>RViz</span><span>Gazebo</span></div>
+          <!-- <p><a href="projects/thesis.html" class="btn outline">More details</a></p> -->
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/PDM.png" alt="Path Planning">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Path Planning and Decision Making Algorithms - ETH course</h3>
+          <p>Hands-on implementation of core algorithms in robot motion planning and decision making. 
+            Topics included graph-based search (A*, Dijkstra), Markov Decision Processes, Dubins paths and steering functions, 
+            configuration space modeling, optimization-based planning, sampling-based methods (RRT, RRT*, PRM), and trajectory discretization.</p>
+          <div class="chips"><span>Python</span><span>A*</span><span>D*</span><span>RRT</span><span>RRT*</span><span>PRM</span><span>Git</span><span>Github</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/ATiC.png" alt="Distributed Model Predictive Control">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Traffic Intersection Simulation of Autonomous Systems with Distributed Model Predictive Control</h3>
+          <p>We developed a simulation framework for autonomous vehicle coordination at intersections using Distributed Model Predictive Control (DMPC).
+            Each vehicle acted as an individual MPC agent communicating with neighbors to ensure safe and efficient traffic flow.
+            The system was implemented in Python and SUMO via TraCI, integrating graph-based coordination and collision avoidance.
+            Results showed improved intersection throughput and smoother trajectories compared to SUMO’s default control logic.
+            The project demonstrated the potential of distributed control strategies for scalable autonomous traffic management.</p>
+          <div class="chips"><span>Python</span><span>MPC</span><span>SUMO-gui</span><span>Netedit</span><span>TraCi</span><span>Git</span><span>Github</span></div>
+          <!-- <p><a href="projects/thesis.html" class="btn outline">Open Case Study</a></p> -->
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/Logos/eth_2.png" alt="ETH">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Introduction to Machine Learning - ETH course</h3>
+          <p>As part of the ETH course Introduction to Machine Learning, our group developed and evaluated multiple machine learning models on real-world datasets.
+            We applied techniques such as data preprocessing, feature selection, dimensionality reduction (PCA), and model training using regression, classification, and neural networks. Model performance was optimized through cross-validation and hyperparameter tuning.
+            Our results and reports received the highest grade possible.</p>
+          <div class="chips"><span>Python</span><span>PyTorch</span><span>scikit-learn</span><span>Git</span><span>Github</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-img">
+      <iframe
+            src="https://www.youtube.com/embed/mzgojURCCb8"
+            title="FinTra Prototype Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Designing a Finance Tracking App for Students - ETH course</h3>
+          <p>As part of the Human-Computer Interaction course at ETH Zurich, our team designed a finance tracking app tailored to the needs of young adults.
+Through interviews, affinity mapping, and user studies, we identified key user needs such as manual expense entry, adaptive budgeting, and personalized visualization.
+We iteratively developed and tested low-, mid-, and high-fidelity prototypes in Figma, focusing on intuitive interaction and accessibility.
+The final A/B user study compared slider- vs. button-based budget adjustment, revealing that a minimal, button-driven design led to faster and more intuitive user interaction.</p>
+          <p></p>
+          <div class="chips"><span>HCI</span><span>App Design</span><span>Git</span><span>Github</span></div>
+        </div>
+      </article>
+    </details>
+
+
+
+    <details class="accordion">
+    <summary>
+          <h3 class="subsection gradient-text">Energy Science</h3>
+  <span class="chev" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6"></path>
+    </svg>
+  </span>
+</summary>
+      <article class="project-card">
+        <div class="project-img-thin">
+        <img src="assets/img/Methodology_framework.png" alt="LCA">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">LCA tool for different sizes of Hydrogen Storage Systems</h3>
+          <p>Developed a Python-based LCA framework integrating Brightway2 and the Ecoinvent database to evaluate environmental impacts
+             of hydrogen storage technologies. The tool allows users to configure system parameters, such as PEM electrolyzer, fuel cell, 
+             and storage capacity, and automatically computes life-cycle metrics. It quantifies the effects of scaling and component choices
+              on overall sustainability, providing system-level insights into hydrogen production and storage pathways.</p>
+          <div class="chips"><span>Python</span><span>Brightway2</span><span>Ecoinvent</span><span>LCA</span></div>
+        </div>
+      </article>
+      </details>
+
+
+
+    <details class="accordion">
+    <summary>
+            <h3 class="subsection gradient-text">Mechanical Engineering</h3>
+  <span class="chev" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6"></path>
+    </svg>
+  </span>
+</summary>
+
+      <article class="project-card">
+        <div class="project-img">
+      <iframe
+            src="https://www.youtube.com/embed/gdox81IdqnA"
+            title="Swissloop"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Mechanical Engieer - Swissloop</h3>
+          <p>Designed and analyzed the test track for a Hyperloop prototype, using Siemens NX for CAD and structural FEA, 
+            and Ansys Maxwell for electromagnetic simulations. Conducted research on magnetic and mechanical steel properties 
+            and explored linear propulsion concepts for novel electric motor topologies. Contributed to the development of 
+            a linear switched reluctance motor (LSRM) and participated in manufacturing processes, including PCB manufacturing 
+            and carbon-fiber composite processing.
+          </p>
+          <div class="chips"><span>CAD</span><span>NX</span><span>Design</span><span>MATLAB</span><span>Rapid prototyping</span><span>PCB manufacturing</span><span>Processing composites</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/Logos/eth_2.png" alt="Bachelor">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Bachelor's Thesis</h3>
+          <p>Conducted an experimental parametric study on innovative heart valve geometries, 
+            focusing on leaflet performance and fluid-dynamic behavior. 
+            Performed data acquisition and post-processing in MATLAB, and utilized rapid prototyping to iteratively 
+            refine the design and improve the testing procedure.
+          </p>
+          <div class="chips"><span>CAD</span><span>NX</span><span>Design</span><span>MATLAB</span><span>Rapid prototyping</span><span>3D-printing</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/EHW24_awards.jpg" alt="Awards">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Awards Design</h3>
+          <p>Designed Podium Awards for the European Hyperloop Week 2024 in CAD with Siemens NX for a drilling and milling process.
+          </p>
+          <div class="chips"><span>CAD</span><span>NX</span><span>Design</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/snowboard.jpg" alt="self-made Snowboard">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Integrative Ski and Board Building Workshop</h3>
+          <p> Designed and manufactured a custom split-snowboard from concept to final product. 
+            The project involved CAD modeling, material selection, core shaping, composite layup, and finishing. 
+            Combined engineering design principles with hands-on fabrication methods to optimize flex pattern and performance, 
+            resulting in a fully functional splitboard.
+          </p>
+          <div class="chips"><span>CAD</span><span>NX</span><span>Design</span><span>wood crafting</span><span>Processing composites</span><span>Rapid prototyping</span></div>
+        </div>
+      </article>
+      
+      <!-- <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/Logos/eth_2.png" alt="ETH">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Product Development and Engineering Design</h3>
+          <p>...</p>
+          <div class="chips"><span>Rapid prototyping</span><span>Laser cutting</span></div>
+        </div>
+      </article> -->
+      </details>
+
+      <details class="accordion">
+    <summary>
+            <h3 class="subsection gradient-text">Operations</h3>
+  <span class="chev" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6"></path>
+    </svg>
+  </span>
+</summary>
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/team23.jpg" alt="Teamphoto">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Swissloop — Co‑President</h3>
+          <p>Led the strategic and organizational development of a multidisciplinary engineering team building Hyperloop prototypes. 
+            Defined the long-term project roadmap, managed budgets and partnerships, represented the team at international exhibitions, 
+            and served as the primary contact for multiple external stakeholders. 
+            Delivered several technical presentations to industry partners and academic audiences. 
+            Oversaw recruitment, onboarding, and team coordination.</p>
+          <div class="chips"><span>Leadership</span><span>Project Management</span><span>Technical Presentations</span><span>Accounting</span></div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-img">
+      <iframe
+            src="https://www.youtube.com/embed/HAYCaNCMg9U"
+            title="EHW Zurich"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">EHW — Event Production Lead</h3>
+          <p>Directed the end-to-end organization of an international engineering competition and conference with over 400 participants. 
+            Led a team of 20 staff and volunteers, ensuring seamless collaboration and execution. Oversaw event logistics, 
+            scheduling, and real-time problem solving. Negotiated contracts and maintained relationships with vendors and key stakeholders.</p>
+          <div class="chips"><span>Leadership</span><span>Time Planning and Optimization</span><span>Project Management</span><span>Event Logistics</span></div>
+        </div>
+      </article>
+
+      <!-- <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/EHW24_ehw_team.JPEG" alt="Presenting">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">EHW Zurich Association — Co-Founder </h3>
+          <p>Led interdisciplinary engineering teams; system coordination and Hyperloop prototype development; organized European Hyperloop Week engagements and demos.</p>
+          <div class="chips"><span>Leadership</span><span>Systems Engineering</span><span>Project Management</span></div>
+        </div>
+      </article> -->
+      
+      <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/mech.JPG" alt="Computer">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Swissloop — Partnership Manager</h3>
+          <p>Managed industry collaborations by acquiring and negotiating with new partners, 
+            including drafting and reviewing contracts. Maintained continuous coordination with external stakeholders to strengthen 
+            long-term partnerships and project support.</p>
+          <div class="chips"><span>Partnership Acquisition</span><span>Industry Collaboration</span><span>Contract Negotiation</span></div>
+        </div>
+      </article>
+
+      <!-- <article class="project-card">
+        <div class="project-img">
+        <img src="assets/img/Logos/eth_2.png" alt="ETH">
+        </div>
+        <div class="project-text">
+          <h3 class="item-title gradient-text">Production and Operations Management - ETH course</h3>
+          <p></p>
+          <div class="chips"><span>Leadership</span><span>Systems Engineering</span><span>Project Management</span></div>
+        </div>
+      </article> -->
+      </details>
+
+    </section>
+  </main>
+
+  <footer class="footer"><p>© <span id="year"></span> Damaris Bartholet</p></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
