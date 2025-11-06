@@ -34,7 +34,7 @@ body{
   z-index:10000; isolation:isolate;
 }
 .nav-inner{ display:flex; align-items:center; justify-content:space-between; height:68px }
-.brand{ font:600 1rem/1 'General Sans','DM Sans',system-ui }
+.brand{ font:600 1rem/1 'General Sans','DM Sans',system-ui, text-transform: uppercase }
 .links a{ text-decoration:none; color:var(--muted); margin-left:22px; font-weight:500 }
 .links a:hover{ color:var(--ink) }
 
